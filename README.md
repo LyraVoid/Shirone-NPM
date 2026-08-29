@@ -1,8 +1,10 @@
-# shirones — build & publish pipeline
+# Shirone-NPM — build & publish pipeline
 
 This repository packages the [Shirone](https://github.com/LyraVoid/Shirone) Astro
 theme as an npm package. **It contains no theme source**: everything is pulled
 from upstream at build time, so the theme has exactly one source of truth.
+
+This repo is the build & publish pipeline only.
 
 ```text
 LyraVoid/Shirone (theme + src/integration/)
@@ -59,6 +61,10 @@ most often can be overridden with an env var (full list in
 | `SHIRONES_PACKAGE_NAME` | `shirones` | Published package name |
 | `SHIRONES_VALIDATE_BUILD` | `1` | Set to `0` to skip the Astro build during validation |
 
+The GitHub repository is named **Shirone-NPM**; `SHIRONES_PACKAGE_NAME` controls
+only the **npm** package name (default `shirones`) and can be changed to publish
+under a different name.
+
 ## Publishing
 
 **Manual only** — there is no push trigger, so nothing here publishes by
@@ -78,3 +84,15 @@ Keeping the source upstream means:
 - contributors only ever edit one repository;
 - the package version always tracks the theme version;
 - `workspace/` and `dist/` stay disposable and are `.gitignore`d.
+
+## Authors & acknowledgments
+
+- **Upstream theme** — [Shirone](https://github.com/LyraVoid/Shirone) by
+  [LyraVoid](https://github.com/LyraVoid). All theme source, design and the
+  two-mode packaging contract live there; this repository ships none of it.
+- **Build pipeline** — designed and originally maintained by
+  [yCENzh](https://github.com/yCENzh) in
+  [yCENzh/Shirones](https://github.com/yCENzh/Shirones), the personal repo this
+  one grew out of.
+- **This repository** — `Shirone-NPM`, the pipeline carried forward under the
+  organization after the move from the personal repo.
