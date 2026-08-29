@@ -1,0 +1,7 @@
+# Build-script approval. The key moved between pnpm majors, so both spellings
+# are present: `allowBuilds` (pnpm 11) and `onlyBuiltDependencies` (pnpm 10).
+# esbuild needs its postinstall to fetch the platform binary.
+allowBuilds:
+  esbuild: true
+onlyBuiltDependencies:
+  - esbuild

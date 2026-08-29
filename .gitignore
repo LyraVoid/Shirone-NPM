@@ -1,0 +1,7 @@
+node_modules/
+workspace/
+dist/
+.upstream/
+.validate/
+pnpm-lock.yaml
+*.log
